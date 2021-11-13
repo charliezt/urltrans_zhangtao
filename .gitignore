@@ -3,6 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+jacoReport/
 
 ### STS ###
 .apt_generated
@@ -15,12 +16,14 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
+.mvn
 *.iws
 *.iml
 *.ipr
 *.class
 *.exe
 *.jar
+*.exec
 
 ### NetBeans ###
 /nbproject/private/
