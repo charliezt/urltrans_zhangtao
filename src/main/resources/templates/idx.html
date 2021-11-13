@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <title>长短网址转换</title>
+  <script type="text/javascript">
+        function pcview_long(){
+            form1.action="/LTS/pcView_long";
+            form1.submit();
+        }
+        function pcview_short(){
+            form2.action="/LTS/pcView_short";
+            form2.submit();
+        }
+  </script>
+</head>
+<body>
+<div>
+    <form id="form1" method="post">
+        <br>
+        长网址输入：<input type="text" name="LUrl" size="100" >
+        <Br>
+    </form>
+    获得短网址：<a th:href="@{${LUrl}}" target="_blank"><p th:text="${LUrl_trans}"></p></a>
+    <input type="button" id="LtoS" value="---------------转换长网址---------------" onclick="pcview_long()">
+    <br>
+    <p>-------------------------------------------------------------------------------------------------------------------------------</p>
+    <form id="form2" method="post">
+        短网址输入：<input type="text" name="SUrl" size="20">
+    </form>
+    <br>
+    获得长网址：<a th:href="@{${SUrl_LUrl}}" target="_blank"><p th:text="${SUrl_LUrl}"></p></a>
+    <br>
+    <input type="button" id="StoL" value="---------------转换短网址---------------" onclick="pcview_short()">
+</div>
+</body>
+</html>
